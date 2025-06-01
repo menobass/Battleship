@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hive Ships</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 10px; }
+    #board { border: 2px solid #333; display: block; margin-bottom: 10px; }
+    .btn { margin: 2px; padding: 6px 12px; font-size: 14px; }
+    #log { height: 80px; width: 100%; overflow-y: auto; border: 1px solid #ccc; margin-top: 8px; font-size: 12px; background: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <div id="loginScreen" style="display:block;">
+    <h2>Hive Battleship</h2>
+    <label for="usernameInput">Hive Username:</label>
+    <input type="text" id="usernameInput" placeholder="Enter your Hive username" />
+    <button class="btn" id="loginBtn">Log In</button>
+    <div style="font-size:11px; color:#555; margin-top:4px;">A random board will be generated... good luck!</div>
+  </div>
+  <div id="mainScreen" style="display:none;">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <span id="userDisplay"></span>
+      <button class="btn" id="logoutBtn">Log Out</button>
+    </div>
+    <canvas id="board" width="300" height="300"></canvas>
+    <div>
+      <button class="btn" id="challengeBtn">Send Challenge</button>
+    </div>
+    <div id="log"></div>
+  </div>
+  <div id="challengeScreen" style="display:none;">
+    <h3>Declare War</h3>
+    <label for="opponentInput">Opponent Hive Username:</label>
+    <input type="text" id="opponentInput" placeholder="Enter opponent username" />
+    <button class="btn" id="sendChallengeBtn">Send</button>
+    <button class="btn" id="cancelChallengeBtn">Cancel</button>
+    <div id="challengeStatus" style="margin-top:8px; font-size:12px;"></div>
+  </div>
+  <script src="game.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

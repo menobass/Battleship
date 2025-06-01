@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Hive Battleship",
+  "version": "0.1.0",
+  "description": "A Chrome extension Battleship game using the Hive blockchain for communication.",
+  "permissions": [
+    "activeTab",
+    "notifications"
+  ],
+  "host_permissions": [
+    "*://hive.blog/*",
+    "*://api.hive.blog/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
