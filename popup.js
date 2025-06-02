@@ -131,7 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     const memo = `I declare war to you @${opponent}, do you accept?\nSeed: ${gameSeed}`;
     // Open a small popup window for Keychain action
-    const url = `keychain-action.html?from=${encodeURIComponent(user)}&to=${encodeURIComponent(opponent)}&memo=${encodeURIComponent(memo)}&amount=0.01&currency=HBD`;
+    const url = `https://menobass.github.io/Battleship/keychain-action.html?from=${encodeURIComponent(user)}&to=${encodeURIComponent(opponent)}&memo=${encodeURIComponent(memo)}&amount=0.01&currency=HBD`;
     window.open(url, 'keychainAction', 'width=400,height=300,menubar=no,toolbar=no,location=no,status=no');
     challengeStatus.textContent = 'Please confirm the action in the new window...';
     setTimeout(hideChallengeScreen, 2000);
